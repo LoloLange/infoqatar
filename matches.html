@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgpA5Gvquu36zQi9vSXFhnb-iStiOUpIjg_3HYLFmN-yp-ZNB4oPfUs1wSKlPOPy5wYBTzOuNLdqP1jhSJrciNjZoG9AZDNielAs0OWU66YY34N7QWdpfXl5Emcjk9N_bi7TvOy4Hab9OAyVbA8R8Vsjk1m_hYU1_jzeV-fVc30iEWjMFatA8pCi96m/s128/Qatar2022128x.png">
+    <title>InfoQatar | World Cup 2022</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="matches.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="font-['Nunito'] bg-[#1B2027] text-white">
+    <header class="bg-[#8A1538] fixed w-full h-[64px] shadow-lg shadow-[#00000059]">
+        <div class="flex space-x-20 items-center text-lg text-zinc-200 font-medium">
+            <a href="index.html"><img class="w-[32px] brightness-[0.92] p-[6px] ml-[50px] mr-[20px]" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/FIFA_World_Cup_Icon_%28Campionato_mondiale_di_calcio%29.svg/1200px-FIFA_World_Cup_Icon_%28Campionato_mondiale_di_calcio%29.svg.png" alt="w-cup"></a>
+            <a class="transition-all hover:text-gray-700" href="index.html">Home</a>
+            <a class="transition-all hover:text-gray-700" href="index.html#today">Today</a>
+            <a class="transition-all hover:text-gray-700" href="matches.html">Matches</a>
+            <a class="transition-all hover:text-gray-700" href="groups.html">Groups</a>
+        </div>
+    </header>
+     
+    <section class="pt-[100px] flex justify-center">
+        <div class="flex justify-between w-[950px] font-bold text-gray-500">
+            <button id="gs" aria-selected="true" aria-hidden="false">GROUP STAGE</button>
+            <button id="r8" aria-selected="false" aria-hidden="true">ROUND OF 16</button>
+            <button id="r4" aria-selected="false" aria-hidden="true">QUARTER-FINAL</button>
+            <button id="sf" aria-selected="false" aria-hidden="true">SEMI-FINALS</button>
+            <button id="3p" aria-selected="false" aria-hidden="true">3° PLACE</button>
+            <button id="fi" aria-selected="false" aria-hidden="true">FINAL</button>
+        </div>
+    </section>
+    
+    <nav id="group-stage" aria-selected="true" aria-hidden="false" aria-current="true" class="pt-5"></nav>
+    <nav id="round-8" aria-selected="false" aria-hidden="true" aria-current="false" class="pt-5"></nav>
+    <nav id="round-4" aria-selected="false" aria-hidden="true" aria-current="false" class="pt-5"></nav>
+    <nav id="semifinal" aria-selected="false" aria-hidden="true" aria-current="false" class="pt-5"></nav>
+    <nav id="third-place" aria-selected="false" aria-hidden="true" aria-current="false" class="pt-5"></nav>
+    <nav id="final" aria-selected="false" aria-hidden="true" aria-current="false" class="pt-5"></nav>
+    
+
+    <script src="script.js"></script>
+</body>
+</html>

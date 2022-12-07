@@ -10,7 +10,6 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="matches.js"></script>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body class="font-['Nunito'] bg-[#1B2027] text-white">
@@ -25,24 +24,32 @@
     </header>
      
     <section class="pt-[100px] flex justify-center">
-        <div class="flex justify-between w-[950px] font-bold text-gray-500">
-            <button id="gs" aria-selected="true" aria-hidden="false">GROUP STAGE</button>
-            <button id="r8" aria-selected="false" aria-hidden="true">ROUND OF 16</button>
-            <button id="r4" aria-selected="false" aria-hidden="true">QUARTER-FINAL</button>
-            <button id="sf" aria-selected="false" aria-hidden="true">SEMI-FINALS</button>
-            <button id="3p" aria-selected="false" aria-hidden="true">3° PLACE</button>
-            <button id="fi" aria-selected="false" aria-hidden="true">FINAL</button>
-        </div>
-    </section>
-    
-    <nav id="group-stage" aria-selected="true" aria-hidden="false" aria-current="true" class="pt-5"></nav>
-    <nav id="round-8" aria-selected="false" aria-hidden="true" aria-current="false" class="pt-5"></nav>
-    <nav id="round-4" aria-selected="false" aria-hidden="true" aria-current="false" class="pt-5"></nav>
-    <nav id="semifinal" aria-selected="false" aria-hidden="true" aria-current="false" class="pt-5"></nav>
-    <nav id="third-place" aria-selected="false" aria-hidden="true" aria-current="false" class="pt-5"></nav>
-    <nav id="final" aria-selected="false" aria-hidden="true" aria-current="false" class="pt-5"></nav>
-    
+        <table id="table" class="border-separate border-spacing-8 bg-[#1E293B] text-md rounded-[4px]">
+            <thead>
+                <tr>
+                    <th class="pr-[300px]">Equipo</th>
+                    <th>P</th>
+                    <th>PJ</th>
+                    <th>PG</th>
+                    <th>PE</th>
+                    <th>PP</th>
+                    <th>DIF</th>
+                </tr>
+            </thead>
 
-    <script src="script.js"></script>
+            <tbody>
+                <tr>
+                    <td class="pr-[300px]">Equipo</td>
+                    <td>6</td>
+                    <td>3</td>
+                    <td>2</td>
+                    <td>0</td>
+                    <td>1</td>
+                    <td>+4</td>
+                </tr>
+                
+            </tbody>
+        </table>
+    </section>
 </body>
 </html>
