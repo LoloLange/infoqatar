@@ -122,7 +122,7 @@ function getdataToday(){
                 errorMsg.setAttribute('class', 'm-[75px] text-5xl font-bold text-zinc-200 w-[350px]');
 
                 let img = newDiv.appendChild(document.createElement('img'));
-                img.setAttribute('src', '../img/Soccer-bro.svg');
+                img.setAttribute('src', './img/Soccer-bro.svg');
                 img.setAttribute('class', 'h-[400px]');
 
 
@@ -136,7 +136,7 @@ function getdataToday(){
                 errorMsg_t.setAttribute('class', 'm-[75px] text-5xl font-bold text-zinc-200 w-[350px]');
 
                 let img_t = newDiv_t.appendChild(document.createElement('img'));
-                img_t.setAttribute('src', '../img/Soccer-bro.svg');
+                img_t.setAttribute('src', './img/Soccer-bro.svg');
                 img_t.setAttribute('class', 'h-[400px]');
             } 
     })
