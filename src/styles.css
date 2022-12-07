@@ -1,0 +1,24 @@
+* {
+    scroll-behavior: smooth;
+}
+
+
+[aria-current="false"] {
+    display: none;
+}
+
+
+
+::-webkit-scrollbar {
+    background-color: #232728;
+    color: #bcb4a8;
+    width: 12px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #4c5155;
+}
+
+::-webkit-scrollbar-corner {
+    background-color: #1a1d1e;
+}
