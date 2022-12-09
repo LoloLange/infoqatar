@@ -28,3 +28,9 @@ tr {
 ::-webkit-scrollbar-corner {
     background-color: #1a1d1e;
 }
+
+#arrow {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}

@@ -12,15 +12,16 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="api.js"></script>
     <link rel="stylesheet" href="styles.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body class="font-['Nunito'] bg-[#1B2027] text-white">
     <header class="bg-[#8A1538] fixed w-full h-[64px] shadow-lg shadow-[#00000059]">
         <div class="flex space-x-20 items-center text-lg text-zinc-200 font-medium">
             <a href="#"><img class="w-[32px] brightness-[0.92] p-[6px] ml-[50px] mr-[20px]" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/FIFA_World_Cup_Icon_%28Campionato_mondiale_di_calcio%29.svg/1200px-FIFA_World_Cup_Icon_%28Campionato_mondiale_di_calcio%29.svg.png" alt="w-cup"></a>
             <a class="transition-all hover:text-[#1A4527]" href="index.html">Home</a>
-            <a class="transition-all hover:text-[#1A4527]" href="#today">Today</a>
+            <a class="transition-all hover:text-[#1A4527]" href="#_today">Today</a>
             <a class="transition-all hover:text-[#1A4527]" href="matches.html">Matches</a>
-            <a class="transition-all hover:text-[#1A4527]" href="groups.html">Groups</a>
+            <!-- <a class="transition-all hover:text-[#1A4527]" href="groups.html">Groups</a> -->
         </div>
     </header>
      
@@ -30,8 +31,13 @@
             <p class="text-[#8A1538]">InfoQatar</p>
             <p class="text-xl text-[#1B2027] pt-5">Qatar 2022 live matches, results, and more</p>
         </div>
-
+        
     </section>
+    <div id="arrow" class="text-[110px] text-[#8A1538] h-[12px] motion-safe:animate-bounce">
+        <div class="translate-y-4">
+            <i class='bx bx-chevrons-down'></i>
+        </div>
+    </div>
     
     <nav id="today">
         <p class="text-4xl font-bold text-center pt-[2em] text-[#1077C3]">Today's matches:</p>
