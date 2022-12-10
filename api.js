@@ -124,9 +124,6 @@ function getdataToday(){
                     if(match.winner === match.awayTeam) {
                         awayTeam.setAttribute('class', 'text-[#1077C3] px-2 font-bold');
                     }
-
-                    console.log(match)
-                    console.log(details.length)
                 }
 
                 
@@ -159,7 +156,7 @@ function getdataTomorrow(){
 
             tomorrow_id.forEach((id) => {
 
-                if(details.length != 0) {
+            if(details.length != 0) {
 
                 const year = details[id].datetime.slice(0, 4);
                 const month = details[id].datetime.slice(5, 7);
@@ -258,21 +255,22 @@ function getdataTomorrow(){
                 }
             }
 
-            if(details.length === 0) {
-                let nav_t = document.getElementById('tomorrow');
-                let newDiv_t = nav_t.appendChild(document.createElement('div'));
-                newDiv_t.setAttribute('class', 'flex justify-center');
-                newDiv_t.setAttribute('id', 'error');
+        })
+        if(details.length === 0) {
+            console.log(details.length)
+            let nav_t = document.getElementById('tomorrow');
+            let newDiv_t = nav_t.appendChild(document.createElement('div'));
+            newDiv_t.setAttribute('class', 'flex justify-center');
+            newDiv_t.setAttribute('id', 'error');
 
-                let errorMsg_t = newDiv_t.appendChild(document.createElement('p'));
-                errorMsg_t.innerText = "Sorry! An error has ocurred or there are no matches to show.";
-                errorMsg_t.setAttribute('class', 'm-[75px] text-5xl font-bold text-zinc-200 w-[350px]');
+            let errorMsg_t = newDiv_t.appendChild(document.createElement('p'));
+            errorMsg_t.innerText = "Sorry! An error has ocurred or there are no matches to show.";
+            errorMsg_t.setAttribute('class', 'm-[75px] text-5xl font-bold text-zinc-200 w-[350px]');
 
-                let img_t = newDiv_t.appendChild(document.createElement('img'));
-                img_t.setAttribute('src', './img/Soccer-bro.svg');
-                img_t.setAttribute('class', 'h-[400px]');
-            } 
-            })
+            let img_t = newDiv_t.appendChild(document.createElement('img'));
+            img_t.setAttribute('src', './img/Soccer-bro.svg');
+            img_t.setAttribute('class', 'h-[400px]');
+        }
     })
 }
 

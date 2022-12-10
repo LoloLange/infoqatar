@@ -34,3 +34,8 @@ tr {
     justify-content: center;
     align-items: flex-end;
 }
+
+#ir-arriba {
+    bottom: 0;
+    right: 0;
+}

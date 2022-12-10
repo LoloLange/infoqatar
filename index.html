@@ -13,6 +13,8 @@
     <script src="api.js"></script>
     <link rel="stylesheet" href="styles.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.js" integrity="sha512-CX7sDOp7UTAq+i1FYIlf9Uo27x4os+kGeoT7rgwvY+4dmjqV0IuE/Bl5hVsjnQPQiTOhAX1O2r2j5bjsFBvv/A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js" integrity="sha512-57oZ/vW8ANMjR/KQ6Be9v/+/h6bq9/l3f0Oc7vn6qMqyhvPd1cvKBRWWpzu0QoneImqr2SkmO4MSqU+RpHom3Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
 </head>
 <body class="font-['Nunito'] bg-[#1B2027] text-white">
     <header class="bg-[#8A1538] fixed w-full h-[64px] shadow-lg shadow-[#00000059]">
@@ -24,6 +26,11 @@
             <!-- <a class="transition-all hover:text-[#1A4527]" href="groups.html">Groups</a> -->
         </div>
     </header>
+
+    <!-- <div id="ir-arriba" class="fixed z-10 cursor-pointer">
+        <i class='bx bxs-circle absolute text-black text-[60px]'></i>
+        <i class='bx bx-up-arrow-alt absolute text-[50px] translate-x-1 translate-y-1'></i>
+    </div> -->
      
     <section class="h-[800px] flex justify-center items-center bg-[url('https://www.thaipbsworld.com/wp-content/uploads/2022/11/world-cup-explainer-videoSixteenByNine3000.jpg')] bg-left bg-fixed bg-cover bg-no-repeat">
         <div class="mr-[800px] text-8xl font-bold text-zinc-800">
@@ -47,5 +54,17 @@
         <p class="text-4xl font-bold text-center pt-6 text-[#1077C3]">Tomorrow's matches:</p>
     </nav>
 
+
+    <!-- <script>
+        $(document).ready(function(){ irArriba(); }); //Hacia arriba
+
+        function irArriba(){
+        $('#ir-arriba').click(function(){ $('body,html').animate({ scrollTop:'0px' },100); });
+        $(window).scroll(function(){
+            if($(this).scrollTop() > 0){ $('#ir-arriba').slideDown(600); }else{ $('#ir-arriba').slideUp(200); }
+        });
+        $('.ir-abajo').click(function(){ $('body,html').animate({ scrollTop:'1000px' },1000); });
+        }
+    </script> -->
 </body>
 </html>

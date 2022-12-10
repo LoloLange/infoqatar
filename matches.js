@@ -44,9 +44,30 @@ function groupstage(){
                         match.time = "Completed";
                     }
                     
-                    
+                    if(match.status === "in_progress") {
+                        match.time = "In progress. For more info go to today's matches"
+                    }
     
                         let nav = document.getElementById('group-stage');
+                        
+                        if(id != 0) {
+                            const prevMonth = details[id - 1].datetime.slice(5, 7);
+                            const prevDay = details[id - 1].datetime.slice(8, 10);
+                            let previousDate = prevDay + "-" + prevMonth + "-" + year
+                            console.log(previousDate)
+                            console.log(match.date)
+
+                            if(previousDate != match.date) {
+                                let date = nav.appendChild(document.createElement('p'));
+                                date.innerText = match.date;
+                                date.setAttribute('class', 'text-center text-xl font-black text-zinc-300 rounded-md bg-[#8A1538] py-2 mx-[400px] shadow-lg shadow-[#00000059]')
+                            }
+                        } else {
+                            let date = nav.appendChild(document.createElement('p'));
+                            date.innerText = match.date;
+                            date.setAttribute('class', 'text-center text-xl font-black text-zinc-300 rounded-md bg-[#8A1538] py-2 mx-[400px] shadow-lg shadow-[#00000059]')
+                        }
+                    
                         let newDiv = nav.appendChild(document.createElement('div'));
                         newDiv.setAttribute('class', 'p-2 text-xl bg-gray-800 text-center my-4 mx-[400px] shadow-lg shadow-[#00000059]');
                         newDiv.setAttribute('id', 'group-stage')
@@ -115,9 +136,7 @@ function groupstage(){
                             homeTeam.setAttribute('class', 'text-[#1077C3] px-2 font-bold');
                             awayTeam.setAttribute('class', 'text-[#1077C3] px-2 font-bold');
                         }
-                    
                 })
-            
 
     })
 }
@@ -166,9 +185,30 @@ function roundof16(){
                         match.time = "Completed";
                     }
 
-                    
+                    if(match.status === "in_progress") {
+                        match.time = "In progress. For more info go to today's matches"
+                    }
     
                         let nav = document.getElementById('round-8');
+
+                        if(id != 0) {
+                            const prevMonth = details[id - 1].datetime.slice(5, 7);
+                            const prevDay = details[id - 1].datetime.slice(8, 10);
+                            let previousDate = prevDay + "-" + prevMonth + "-" + year
+                            console.log(previousDate)
+                            console.log(match.date)
+
+                            if(previousDate != match.date) {
+                                let date = nav.appendChild(document.createElement('p'));
+                                date.innerText = match.date;
+                                date.setAttribute('class', 'text-center text-xl font-black text-zinc-300 rounded-md bg-[#8A1538] py-2 mx-[400px] shadow-lg shadow-[#00000059]')
+                            }
+                        } else {
+                            let date = nav.appendChild(document.createElement('p'));
+                            date.innerText = match.date;
+                            date.setAttribute('class', 'text-center text-xl font-black text-zinc-300 rounded-md bg-[#8A1538] py-2 mx-[400px] shadow-lg shadow-[#00000059]')
+                        }
+
                         let newDiv = nav.appendChild(document.createElement('div'));
                         newDiv.setAttribute('class', 'p-2 text-xl bg-gray-800 text-center my-4 mx-[400px] shadow-lg shadow-[#00000059]');
                         newDiv.setAttribute('id', 'round-8')
@@ -302,9 +342,32 @@ function quarterFinals(){
                     if(match.time === "future_scheduled") {
                         match.time = "Upcoming"
                     }
+
+                    if(match.time === "in_progress") {
+                        match.time = "In progress. For more info go to today's matches"
+                    }
                     
     
                         let nav = document.getElementById('round-4');
+
+                        if(id != 0) {
+                            const prevMonth = details[id - 1].datetime.slice(5, 7);
+                            const prevDay = details[id - 1].datetime.slice(8, 10);
+                            let previousDate = prevDay + "-" + prevMonth + "-" + year
+                            console.log(previousDate)
+                            console.log(match.date)
+
+                            if(previousDate != match.date) {
+                                let date = nav.appendChild(document.createElement('p'));
+                                date.innerText = match.date;
+                                date.setAttribute('class', 'text-center text-xl font-black text-zinc-300 rounded-md bg-[#8A1538] py-2 mx-[400px] shadow-lg shadow-[#00000059]')
+                            }
+                        } else {
+                            let date = nav.appendChild(document.createElement('p'));
+                            date.innerText = match.date;
+                            date.setAttribute('class', 'text-center text-xl font-black text-zinc-300 rounded-md bg-[#8A1538] py-2 mx-[400px] shadow-lg shadow-[#00000059]')
+                        }
+
                         let newDiv = nav.appendChild(document.createElement('div'));
                         newDiv.setAttribute('class', 'p-2 text-xl bg-gray-800 text-center my-4 mx-[400px] shadow-lg shadow-[#00000059]');
                         newDiv.setAttribute('id', 'round-4')
@@ -444,9 +507,32 @@ function semiFinal(){
                         match.homeGoals = null;
                         match.awayGoals = null;
                     }
+
+                    if(match.status === "in_progress") {
+                        match.time = "In progress. For more info go to today's matches"
+                    }
                     
     
                         let nav = document.getElementById('semifinal');
+
+                        if(id != 0) {
+                            const prevMonth = details[id - 1].datetime.slice(5, 7);
+                            const prevDay = details[id - 1].datetime.slice(8, 10);
+                            let previousDate = prevDay + "-" + prevMonth + "-" + year
+                            console.log(previousDate)
+                            console.log(match.date)
+
+                            if(previousDate != match.date) {
+                                let date = nav.appendChild(document.createElement('p'));
+                                date.innerText = match.date;
+                                date.setAttribute('class', 'text-center text-xl font-black text-zinc-300 rounded-md bg-[#8A1538] py-2 mx-[400px] shadow-lg shadow-[#00000059]')
+                            }
+                        } else {
+                            let date = nav.appendChild(document.createElement('p'));
+                            date.innerText = match.date;
+                            date.setAttribute('class', 'text-center text-xl font-black text-zinc-300 rounded-md bg-[#8A1538] py-2 mx-[400px] shadow-lg shadow-[#00000059]')
+                        }
+
                         let newDiv = nav.appendChild(document.createElement('div'));
                         newDiv.setAttribute('class', 'p-2 text-xl bg-gray-800 text-center my-4 mx-[400px] shadow-lg shadow-[#00000059]');
                         newDiv.setAttribute('id', 'semifinal')
@@ -586,9 +672,32 @@ function thirdPlace(){
                         match.homeGoals = null;
                         match.awayGoals = null;
                     }
+
+                    if(match.status === "in_progress") {
+                        match.time = "In progress. For more info go to today's matches"
+                    }
                     
     
                         let nav = document.getElementById('third-place');
+
+                        if(id != 0) {
+                            const prevMonth = details[id - 1].datetime.slice(5, 7);
+                            const prevDay = details[id - 1].datetime.slice(8, 10);
+                            let previousDate = prevDay + "-" + prevMonth + "-" + year
+                            console.log(previousDate)
+                            console.log(match.date)
+
+                            if(previousDate != match.date) {
+                                let date = nav.appendChild(document.createElement('p'));
+                                date.innerText = match.date;
+                                date.setAttribute('class', 'text-center text-xl font-black text-zinc-300 rounded-md bg-[#8A1538] py-2 mx-[400px] shadow-lg shadow-[#00000059]')
+                            }
+                        } else {
+                            let date = nav.appendChild(document.createElement('p'));
+                            date.innerText = match.date;
+                            date.setAttribute('class', 'text-center text-xl font-black text-zinc-300 rounded-md bg-[#8A1538] py-2 mx-[400px] shadow-lg shadow-[#00000059]')
+                        }
+
                         let newDiv = nav.appendChild(document.createElement('div'));
                         newDiv.setAttribute('class', 'p-2 text-xl bg-gray-800 text-center my-4 mx-[400px] shadow-lg shadow-[#00000059]');
                         newDiv.setAttribute('id', 'third-place')
@@ -729,8 +838,30 @@ function finale(){
                         match.awayGoals = null;
                     }
                     
+                    if(match.status === "in_progress") {
+                        match.time = "In progress. For more info go to today's matches"
+                    }
     
                         let nav = document.getElementById('final');
+
+                        if(id != 0) {
+                            const prevMonth = details[id - 1].datetime.slice(5, 7);
+                            const prevDay = details[id - 1].datetime.slice(8, 10);
+                            let previousDate = prevDay + "-" + prevMonth + "-" + year
+                            console.log(previousDate)
+                            console.log(match.date)
+
+                            if(previousDate != match.date) {
+                                let date = nav.appendChild(document.createElement('p'));
+                                date.innerText = match.date;
+                                date.setAttribute('class', 'text-center text-xl font-black text-zinc-300 rounded-md bg-[#8A1538] py-2 mx-[400px] shadow-lg shadow-[#00000059]')
+                            }
+                        } else {
+                            let date = nav.appendChild(document.createElement('p'));
+                            date.innerText = match.date;
+                            date.setAttribute('class', 'text-center text-xl font-black text-zinc-300 rounded-md bg-[#8A1538] py-2 mx-[400px] shadow-lg shadow-[#00000059]')
+                        }
+
                         let newDiv = nav.appendChild(document.createElement('div'));
                         newDiv.setAttribute('class', 'p-2 text-xl bg-gray-800 text-center my-4 mx-[400px] shadow-lg shadow-[#00000059]');
                         newDiv.setAttribute('id', 'final')
