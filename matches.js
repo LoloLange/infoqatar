@@ -45,7 +45,7 @@ function groupstage(){
                     }
                     
                     if(match.status === "in_progress") {
-                        match.time = "In progress. For more info go to today's matches"
+                        match.time = "In progress. See live minute in today's matches"
                     }
     
                         let nav = document.getElementById('group-stage');
@@ -54,22 +54,20 @@ function groupstage(){
                             const prevMonth = details[id - 1].datetime.slice(5, 7);
                             const prevDay = details[id - 1].datetime.slice(8, 10);
                             let previousDate = prevDay + "-" + prevMonth + "-" + year
-                            console.log(previousDate)
-                            console.log(match.date)
 
                             if(previousDate != match.date) {
                                 let date = nav.appendChild(document.createElement('p'));
                                 date.innerText = match.date;
-                                date.setAttribute('class', 'text-center text-xl font-black text-zinc-300 rounded-md bg-[#8A1538] py-2 mx-[400px] shadow-lg shadow-[#00000059]')
+                                date.setAttribute('class', 'md:mx-[100px] xl:mx-[300px] p-2 text-xl bg-[#8A1538] rounded-md font-bold text-center my-4 2xl:mx-[400px] shadow-lg shadow-[#00000059]')
                             }
                         } else {
                             let date = nav.appendChild(document.createElement('p'));
                             date.innerText = match.date;
-                            date.setAttribute('class', 'text-center text-xl font-black text-zinc-300 rounded-md bg-[#8A1538] py-2 mx-[400px] shadow-lg shadow-[#00000059]')
+                            date.setAttribute('class', 'md:mx-[100px] xl:mx-[300px] p-2 text-xl bg-[#8A1538] rounded-md font-bold text-center my-4 2xl:mx-[400px] shadow-lg shadow-[#00000059]')
                         }
                     
                         let newDiv = nav.appendChild(document.createElement('div'));
-                        newDiv.setAttribute('class', 'p-2 text-xl bg-gray-800 text-center my-4 mx-[400px] shadow-lg shadow-[#00000059]');
+                        newDiv.setAttribute('class', 'md:mx-[100px] xl:mx-[300px] p-2 text-xl bg-gray-800 text-center my-4 2xl:mx-[400px] shadow-lg shadow-[#00000059]');
                         newDiv.setAttribute('id', 'group-stage')
         
                         let stage = newDiv.appendChild(document.createElement('p'));
@@ -86,12 +84,12 @@ function groupstage(){
                         if(match.flag_home != "./img/To Be Determined.svg.webp") {
                             let homeFlag = teamsDiv.appendChild(document.createElement('img'));
                             homeFlag.setAttribute('src', match.flag_home);
-                            homeFlag.setAttribute('class', 'w-[28px] h-[20px] mr-8 mt-[5px]');
+                            homeFlag.setAttribute('class', 'w-[28px] h-[20px] sm:mr-8 mt-[5px]');
                         }
                         
                         let homeGoals = teamsDiv.appendChild(document.createElement('p'));
                         homeGoals.innerText = match.homeGoals;
-                        homeGoals.setAttribute('class', 'px-6');
+                        homeGoals.setAttribute('class', 'px-3 sm:px-6');
         
                         let newSpan = teamsDiv.appendChild(document.createElement('p'));
                         newSpan.innerText = "-"
@@ -99,12 +97,12 @@ function groupstage(){
                         
                         let awayGoals = teamsDiv.appendChild(document.createElement('p'));
                         awayGoals.innerText = match.awayGoals;
-                        awayGoals.setAttribute('class', 'px-6');
+                        awayGoals.setAttribute('class', 'px-3 sm:px-6');
         
                         if(match.flag_away != "./img/To Be Determined.svg.webp") {
                             let awayFlag = teamsDiv.appendChild(document.createElement('img'));
                             awayFlag.setAttribute('src', match.flag_away);
-                            awayFlag.setAttribute('class', 'w-[28px] h-[20px] ml-8 mt-[5px]');
+                            awayFlag.setAttribute('class', 'w-[28px] h-[20px] sm:ml-8 mt-[5px]');
 
                         }
 
@@ -186,7 +184,7 @@ function roundof16(){
                     }
 
                     if(match.status === "in_progress") {
-                        match.time = "In progress. For more info go to today's matches"
+                        match.time = "In progress. See live minute in today's matches"
                     }
     
                         let nav = document.getElementById('round-8');
@@ -201,7 +199,7 @@ function roundof16(){
                             if(previousDate != match.date) {
                                 let date = nav.appendChild(document.createElement('p'));
                                 date.innerText = match.date;
-                                date.setAttribute('class', 'text-center text-xl font-black text-zinc-300 rounded-md bg-[#8A1538] py-2 mx-[400px] shadow-lg shadow-[#00000059]')
+                                date.setAttribute('class', 'md:mx-[100px] xl:mx-[300px] p-2 text-xl bg-[#8A1538] rounded-md font-bold text-center my-4 2xl:mx-[400px] shadow-lg shadow-[#00000059]')
                             }
                         } else {
                             let date = nav.appendChild(document.createElement('p'));
@@ -210,7 +208,7 @@ function roundof16(){
                         }
 
                         let newDiv = nav.appendChild(document.createElement('div'));
-                        newDiv.setAttribute('class', 'p-2 text-xl bg-gray-800 text-center my-4 mx-[400px] shadow-lg shadow-[#00000059]');
+                        newDiv.setAttribute('class', 'md:mx-[100px] xl:mx-[300px] p-2 text-xl bg-gray-800 text-center my-4 2xl:mx-[400px] shadow-lg shadow-[#00000059]');
                         newDiv.setAttribute('id', 'round-8')
         
                         let stage = newDiv.appendChild(document.createElement('p'));
@@ -227,7 +225,7 @@ function roundof16(){
                         if(match.flag_home != "./img/To Be Determined.svg.webp") {
                             let homeFlag = teamsDiv.appendChild(document.createElement('img'));
                             homeFlag.setAttribute('src', match.flag_home);
-                            homeFlag.setAttribute('class', 'w-[28px] h-[20px] mr-8 mt-[5px]');
+                            homeFlag.setAttribute('class', 'w-[28px] h-[20px] sm:mr-8 mt-[5px]');
                         }
 
 
@@ -238,7 +236,7 @@ function roundof16(){
                         
                         let homeGoals = teamsDiv.appendChild(document.createElement('p'));
                         homeGoals.innerText = match.homeGoals;
-                        homeGoals.setAttribute('class', 'px-6');
+                        homeGoals.setAttribute('class', 'px-3 sm:px-6');
         
                         let newSpan = teamsDiv.appendChild(document.createElement('p'));
                         newSpan.innerText = "-"
@@ -246,7 +244,7 @@ function roundof16(){
                         
                         let awayGoals = teamsDiv.appendChild(document.createElement('p'));
                         awayGoals.innerText = match.awayGoals;
-                        awayGoals.setAttribute('class', 'px-6');
+                        awayGoals.setAttribute('class', 'px-3 sm:px-6');
 
                         if(match.time === "Completed" && match.homeGoals === match.awayGoals) {
                             let away_penalties = teamsDiv.appendChild(document.createElement('p'));
@@ -256,7 +254,7 @@ function roundof16(){
                         if(match.flag_away != "./img/To Be Determined.svg.webp") {
                             let awayFlag = teamsDiv.appendChild(document.createElement('img'));
                             awayFlag.setAttribute('src', match.flag_away);
-                            awayFlag.setAttribute('class', 'w-[28px] h-[20px] ml-8 mt-[5px]');
+                            awayFlag.setAttribute('class', 'w-[28px] h-[20px] sm:ml-8 mt-[5px]');
                         }
 
                         let awayTeam = teamsDiv.appendChild(document.createElement('p'));
@@ -344,7 +342,7 @@ function quarterFinals(){
                     }
 
                     if(match.time === "in_progress") {
-                        match.time = "In progress. For more info go to today's matches"
+                        match.time = "In progress. See live minute in today's matches"
                     }
                     
     
@@ -360,16 +358,16 @@ function quarterFinals(){
                             if(previousDate != match.date) {
                                 let date = nav.appendChild(document.createElement('p'));
                                 date.innerText = match.date;
-                                date.setAttribute('class', 'text-center text-xl font-black text-zinc-300 rounded-md bg-[#8A1538] py-2 mx-[400px] shadow-lg shadow-[#00000059]')
+                                date.setAttribute('class', 'md:mx-[100px] xl:mx-[300px] p-2 text-xl bg-[#8A1538] rounded-md font-bold text-center my-4 2xl:mx-[400px] shadow-lg shadow-[#00000059]')
                             }
                         } else {
                             let date = nav.appendChild(document.createElement('p'));
                             date.innerText = match.date;
-                            date.setAttribute('class', 'text-center text-xl font-black text-zinc-300 rounded-md bg-[#8A1538] py-2 mx-[400px] shadow-lg shadow-[#00000059]')
+                            date.setAttribute('class', 'md:mx-[100px] xl:mx-[300px] p-2 text-xl bg-[#8A1538] rounded-md font-bold text-center my-4 2xl:mx-[400px] shadow-lg shadow-[#00000059]')
                         }
 
                         let newDiv = nav.appendChild(document.createElement('div'));
-                        newDiv.setAttribute('class', 'p-2 text-xl bg-gray-800 text-center my-4 mx-[400px] shadow-lg shadow-[#00000059]');
+                        newDiv.setAttribute('class', 'md:mx-[100px] xl:mx-[300px] p-2 text-xl bg-gray-800 text-center my-4 2xl:mx-[400px] shadow-lg shadow-[#00000059]');
                         newDiv.setAttribute('id', 'round-4')
         
                         let stage = newDiv.appendChild(document.createElement('p'));
@@ -386,7 +384,7 @@ function quarterFinals(){
                         if(match.flag_home != "./img/To Be Determined.svg.webp") {
                             let homeFlag = teamsDiv.appendChild(document.createElement('img'));
                             homeFlag.setAttribute('src', match.flag_home);
-                            homeFlag.setAttribute('class', 'w-[28px] h-[20px] mr-8 mt-[5px]');
+                            homeFlag.setAttribute('class', 'w-[28px] h-[20px] sm:mr-8 mt-[5px]');
                         }
 
                         if(match.time === "Completed" && match.homeGoals === match.awayGoals) {
@@ -396,7 +394,7 @@ function quarterFinals(){
                         
                         let homeGoals = teamsDiv.appendChild(document.createElement('p'));
                         homeGoals.innerText = match.homeGoals;
-                        homeGoals.setAttribute('class', 'px-6');
+                        homeGoals.setAttribute('class', 'px-3 sm:px-6');
         
                         let newSpan = teamsDiv.appendChild(document.createElement('p'));
                         newSpan.innerText = "-"
@@ -404,7 +402,7 @@ function quarterFinals(){
                         
                         let awayGoals = teamsDiv.appendChild(document.createElement('p'));
                         awayGoals.innerText = match.awayGoals;
-                        awayGoals.setAttribute('class', 'px-6');
+                        awayGoals.setAttribute('class', 'px-3 sm:px-6');
 
                         if(match.time === "Completed" && match.homeGoals === match.awayGoals) {
                             let away_penalties = teamsDiv.appendChild(document.createElement('p'));
@@ -414,7 +412,7 @@ function quarterFinals(){
                         if(match.flag_away != "./img/To Be Determined.svg.webp") {
                             let awayFlag = teamsDiv.appendChild(document.createElement('img'));
                             awayFlag.setAttribute('src', match.flag_away);
-                            awayFlag.setAttribute('class', 'w-[28px] h-[20px] ml-8 mt-[5px]');
+                            awayFlag.setAttribute('class', 'w-[28px] h-[20px] sm:ml-8 mt-[5px]');
                         }
 
                         let awayTeam = teamsDiv.appendChild(document.createElement('p'));
@@ -509,7 +507,7 @@ function semiFinal(){
                     }
 
                     if(match.status === "in_progress") {
-                        match.time = "In progress. For more info go to today's matches"
+                        match.time = "In progress. See live minute in today's matches"
                     }
                     
     
@@ -525,16 +523,16 @@ function semiFinal(){
                             if(previousDate != match.date) {
                                 let date = nav.appendChild(document.createElement('p'));
                                 date.innerText = match.date;
-                                date.setAttribute('class', 'text-center text-xl font-black text-zinc-300 rounded-md bg-[#8A1538] py-2 mx-[400px] shadow-lg shadow-[#00000059]')
+                                date.setAttribute('class', 'md:mx-[100px] xl:mx-[300px] p-2 text-xl bg-[#8A1538] rounded-md font-bold text-center my-4 2xl:mx-[400px] shadow-lg shadow-[#00000059]')
                             }
                         } else {
                             let date = nav.appendChild(document.createElement('p'));
                             date.innerText = match.date;
-                            date.setAttribute('class', 'text-center text-xl font-black text-zinc-300 rounded-md bg-[#8A1538] py-2 mx-[400px] shadow-lg shadow-[#00000059]')
+                            date.setAttribute('class', 'md:mx-[100px] xl:mx-[300px] p-2 text-xl bg-[#8A1538] rounded-md font-bold text-center my-4 2xl:mx-[400px] shadow-lg shadow-[#00000059]')
                         }
 
                         let newDiv = nav.appendChild(document.createElement('div'));
-                        newDiv.setAttribute('class', 'p-2 text-xl bg-gray-800 text-center my-4 mx-[400px] shadow-lg shadow-[#00000059]');
+                        newDiv.setAttribute('class', 'md:mx-[100px] xl:mx-[300px] p-2 text-xl bg-gray-800 text-center my-4 2xl:mx-[400px] shadow-lg shadow-[#00000059]');
                         newDiv.setAttribute('id', 'semifinal')
         
                         let stage = newDiv.appendChild(document.createElement('p'));
@@ -551,7 +549,7 @@ function semiFinal(){
                         if(match.flag_home != "./img/To Be Determined.svg.webp") {
                             let homeFlag = teamsDiv.appendChild(document.createElement('img'));
                             homeFlag.setAttribute('src', match.flag_home);
-                            homeFlag.setAttribute('class', 'w-[28px] h-[20px] mr-8 mt-[5px]');
+                            homeFlag.setAttribute('class', 'w-[28px] h-[20px] sm:mr-8 mt-[5px]');
                         }
 
                         if(match.time === "Completed" && match.homeGoals === match.awayGoals) {
@@ -561,7 +559,7 @@ function semiFinal(){
                         
                         let homeGoals = teamsDiv.appendChild(document.createElement('p'));
                         homeGoals.innerText = match.homeGoals;
-                        homeGoals.setAttribute('class', 'px-6');
+                        homeGoals.setAttribute('class', 'px-3 sm:px-6');
         
                         let newSpan = teamsDiv.appendChild(document.createElement('p'));
                         newSpan.innerText = "-"
@@ -569,7 +567,7 @@ function semiFinal(){
                         
                         let awayGoals = teamsDiv.appendChild(document.createElement('p'));
                         awayGoals.innerText = match.awayGoals;
-                        awayGoals.setAttribute('class', 'px-6');
+                        awayGoals.setAttribute('class', 'px-3 sm:px-6');
 
                         if(match.time === "Completed" && match.homeGoals === match.awayGoals) {
                             let away_penalties = teamsDiv.appendChild(document.createElement('p'));
@@ -579,7 +577,7 @@ function semiFinal(){
                         if(match.flag_away != "./img/To Be Determined.svg.webp") {
                             let awayFlag = teamsDiv.appendChild(document.createElement('img'));
                             awayFlag.setAttribute('src', match.flag_away);
-                            awayFlag.setAttribute('class', 'w-[28px] h-[20px] ml-8 mt-[5px]');
+                            awayFlag.setAttribute('class', 'w-[28px] h-[20px] sm:ml-8 mt-[5px]');
                         }
 
                         let awayTeam = teamsDiv.appendChild(document.createElement('p'));
@@ -674,7 +672,7 @@ function thirdPlace(){
                     }
 
                     if(match.status === "in_progress") {
-                        match.time = "In progress. For more info go to today's matches"
+                        match.time = "In progress. See live minute in today's matches"
                     }
                     
     
@@ -690,16 +688,16 @@ function thirdPlace(){
                             if(previousDate != match.date) {
                                 let date = nav.appendChild(document.createElement('p'));
                                 date.innerText = match.date;
-                                date.setAttribute('class', 'text-center text-xl font-black text-zinc-300 rounded-md bg-[#8A1538] py-2 mx-[400px] shadow-lg shadow-[#00000059]')
+                                date.setAttribute('class', 'md:mx-[100px] xl:mx-[300px] p-2 text-xl bg-[#8A1538] rounded-md font-bold text-center my-4 2xl:mx-[400px] shadow-lg shadow-[#00000059]')
                             }
                         } else {
                             let date = nav.appendChild(document.createElement('p'));
                             date.innerText = match.date;
-                            date.setAttribute('class', 'text-center text-xl font-black text-zinc-300 rounded-md bg-[#8A1538] py-2 mx-[400px] shadow-lg shadow-[#00000059]')
+                            date.setAttribute('class', 'md:mx-[100px] xl:mx-[300px] p-2 text-xl bg-[#8A1538] rounded-md font-bold text-center my-4 2xl:mx-[400px] shadow-lg shadow-[#00000059]')
                         }
 
                         let newDiv = nav.appendChild(document.createElement('div'));
-                        newDiv.setAttribute('class', 'p-2 text-xl bg-gray-800 text-center my-4 mx-[400px] shadow-lg shadow-[#00000059]');
+                        newDiv.setAttribute('class', 'md:mx-[100px] xl:mx-[300px] p-2 text-xl bg-gray-800 text-center my-4 2xl:mx-[400px] shadow-lg shadow-[#00000059]');
                         newDiv.setAttribute('id', 'third-place')
         
                         let stage = newDiv.appendChild(document.createElement('p'));
@@ -716,7 +714,7 @@ function thirdPlace(){
                         if(match.flag_home != "./img/To Be Determined.svg.webp") {
                             let homeFlag = teamsDiv.appendChild(document.createElement('img'));
                             homeFlag.setAttribute('src', match.flag_home);
-                            homeFlag.setAttribute('class', 'w-[28px] h-[20px] mr-8 mt-[5px]');
+                            homeFlag.setAttribute('class', 'w-[28px] h-[20px] sm:mr-8 mt-[5px]');
                         }
 
                         if(match.time === "Completed" && match.homeGoals === match.awayGoals) {
@@ -726,7 +724,7 @@ function thirdPlace(){
                         
                         let homeGoals = teamsDiv.appendChild(document.createElement('p'));
                         homeGoals.innerText = match.homeGoals;
-                        homeGoals.setAttribute('class', 'px-6');
+                        homeGoals.setAttribute('class', 'px-3 sm:px-6');
         
                         let newSpan = teamsDiv.appendChild(document.createElement('p'));
                         newSpan.innerText = "-"
@@ -734,7 +732,7 @@ function thirdPlace(){
                         
                         let awayGoals = teamsDiv.appendChild(document.createElement('p'));
                         awayGoals.innerText = match.awayGoals;
-                        awayGoals.setAttribute('class', 'px-6');
+                        awayGoals.setAttribute('class', 'px-3 sm:px-6');
 
                         if(match.time === "Completed" && match.homeGoals === match.awayGoals) {
                             let away_penalties = teamsDiv.appendChild(document.createElement('p'));
@@ -744,7 +742,7 @@ function thirdPlace(){
                         if(match.flag_away != "./img/To Be Determined.svg.webp") {
                             let awayFlag = teamsDiv.appendChild(document.createElement('img'));
                             awayFlag.setAttribute('src', match.flag_away);
-                            awayFlag.setAttribute('class', 'w-[28px] h-[20px] ml-8 mt-[5px]');
+                            awayFlag.setAttribute('class', 'w-[28px] h-[20px] sm:ml-8 mt-[5px]');
                         }
 
                         let awayTeam = teamsDiv.appendChild(document.createElement('p'));
@@ -839,7 +837,7 @@ function finale(){
                     }
                     
                     if(match.status === "in_progress") {
-                        match.time = "In progress. For more info go to today's matches"
+                        match.time = "In progress. See live minute in today's matches"
                     }
     
                         let nav = document.getElementById('final');
@@ -854,16 +852,16 @@ function finale(){
                             if(previousDate != match.date) {
                                 let date = nav.appendChild(document.createElement('p'));
                                 date.innerText = match.date;
-                                date.setAttribute('class', 'text-center text-xl font-black text-zinc-300 rounded-md bg-[#8A1538] py-2 mx-[400px] shadow-lg shadow-[#00000059]')
+                                date.setAttribute('class', 'md:mx-[100px] xl:mx-[300px] p-2 text-xl bg-[#8A1538] rounded-md font-bold text-center my-4 2xl:mx-[400px] shadow-lg shadow-[#00000059]')
                             }
                         } else {
                             let date = nav.appendChild(document.createElement('p'));
                             date.innerText = match.date;
-                            date.setAttribute('class', 'text-center text-xl font-black text-zinc-300 rounded-md bg-[#8A1538] py-2 mx-[400px] shadow-lg shadow-[#00000059]')
+                            date.setAttribute('class', 'md:mx-[100px] xl:mx-[300px] p-2 text-xl bg-[#8A1538] rounded-md font-bold text-center my-4 2xl:mx-[400px] shadow-lg shadow-[#00000059]')
                         }
 
                         let newDiv = nav.appendChild(document.createElement('div'));
-                        newDiv.setAttribute('class', 'p-2 text-xl bg-gray-800 text-center my-4 mx-[400px] shadow-lg shadow-[#00000059]');
+                        newDiv.setAttribute('class', 'md:mx-[100px] xl:mx-[300px] p-2 text-xl bg-gray-800 text-center my-4 2xl:mx-[400px] shadow-lg shadow-[#00000059]');
                         newDiv.setAttribute('id', 'final')
         
                         let stage = newDiv.appendChild(document.createElement('p'));
@@ -880,7 +878,7 @@ function finale(){
                         if(match.flag_home != "./img/To Be Determined.svg.webp") {
                             let homeFlag = teamsDiv.appendChild(document.createElement('img'));
                             homeFlag.setAttribute('src', match.flag_home);
-                            homeFlag.setAttribute('class', 'w-[28px] h-[20px] mr-8 mt-[5px]');
+                            homeFlag.setAttribute('class', 'w-[28px] h-[20px] sm:mr-8 mt-[5px]');
                         }
 
                         if(match.time === "Completed" && match.homeGoals === match.awayGoals) {
@@ -890,7 +888,7 @@ function finale(){
                         
                         let homeGoals = teamsDiv.appendChild(document.createElement('p'));
                         homeGoals.innerText = match.homeGoals;
-                        homeGoals.setAttribute('class', 'px-6');
+                        homeGoals.setAttribute('class', 'px-3 sm:px-6');
         
                         let newSpan = teamsDiv.appendChild(document.createElement('p'));
                         newSpan.innerText = "-"
@@ -898,7 +896,7 @@ function finale(){
                         
                         let awayGoals = teamsDiv.appendChild(document.createElement('p'));
                         awayGoals.innerText = match.awayGoals;
-                        awayGoals.setAttribute('class', 'px-6');
+                        awayGoals.setAttribute('class', 'px-3 sm:px-6');
 
                         if(match.time === "Completed" && match.homeGoals === match.awayGoals) {
                             let away_penalties = teamsDiv.appendChild(document.createElement('p'));
@@ -908,7 +906,7 @@ function finale(){
                         if(match.flag_away != "./img/To Be Determined.svg.webp") {
                             let awayFlag = teamsDiv.appendChild(document.createElement('img'));
                             awayFlag.setAttribute('src', match.flag_away);
-                            awayFlag.setAttribute('class', 'w-[28px] h-[20px] ml-8 mt-[5px]');
+                            awayFlag.setAttribute('class', 'w-[28px] h-[20px] sm:ml-8 mt-[5px]');
                         }
 
                         let awayTeam = teamsDiv.appendChild(document.createElement('p'));

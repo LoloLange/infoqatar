@@ -57,7 +57,7 @@ function getdataToday(){
 
                     let nav = document.getElementById('today');
                     let newDiv = nav.appendChild(document.createElement('div'));
-                    newDiv.setAttribute('class', 'p-2 text-xl bg-gray-800 text-center my-4 mx-[400px] shadow-lg shadow-[#00000059]');
+                    newDiv.setAttribute('class', 'md:mx-[100px] xl:mx-[300px] p-2 text-xl bg-gray-800 text-center my-4 2xl:mx-[400px] shadow-lg shadow-[#00000059]');
                     newDiv.setAttribute('id', '_today');
 
                     let stage = newDiv.appendChild(document.createElement('p'));
@@ -73,7 +73,7 @@ function getdataToday(){
                     
                     let homeFlag = teamsDiv.appendChild(document.createElement('img'));
                     homeFlag.setAttribute('src', match.flag_home);
-                    homeFlag.setAttribute('class', 'w-[28px] h-[20px] mr-8 mt-[3px]');
+                    homeFlag.setAttribute('class', 'w-[28px] h-[20px] sm:mr-8 mt-[3px]');
                     
                     if(match.time === "Full-time" && match.homeGoals === match.awayGoals) {
                         let home_penalties = teamsDiv.appendChild(document.createElement('p'));
@@ -82,7 +82,7 @@ function getdataToday(){
                     
                     let homeGoals = teamsDiv.appendChild(document.createElement('p'));
                     homeGoals.innerText = match.homeGoals;
-                    homeGoals.setAttribute('class', 'px-6');
+                    homeGoals.setAttribute('class', 'px-3 sm:px-6');
 
                     let newSpan = teamsDiv.appendChild(document.createElement('p'));
                     newSpan.innerText = "-"
@@ -90,7 +90,7 @@ function getdataToday(){
                     
                     let awayGoals = teamsDiv.appendChild(document.createElement('p'));
                     awayGoals.innerText = match.awayGoals;
-                    awayGoals.setAttribute('class', 'px-6');
+                    awayGoals.setAttribute('class', 'px-3 sm:px-6');
 
                     if(match.time === "Full-time" && match.homeGoals === match.awayGoals) {
                         let away_penalties = teamsDiv.appendChild(document.createElement('p'));
@@ -99,7 +99,7 @@ function getdataToday(){
 
                     let awayFlag = teamsDiv.appendChild(document.createElement('img'));
                     awayFlag.setAttribute('src', match.flag_away);
-                    awayFlag.setAttribute('class', 'w-[28px] h-[20px] ml-8 mt-[3px]');
+                    awayFlag.setAttribute('class', 'w-[28px] h-[20px] sm:ml-8 mt-[3px]');
 
                     let awayTeam = teamsDiv.appendChild(document.createElement('p'));
                     awayTeam.innerText = match.awayTeam;
@@ -137,11 +137,11 @@ function getdataToday(){
 
                 let errorMsg = newDiv.appendChild(document.createElement('p'));
                 errorMsg.innerText = "Sorry! An error has ocurred or there are no matches to show.";
-                errorMsg.setAttribute('class', 'm-[75px] text-5xl font-bold text-zinc-200 w-[350px]');
+                errorMsg.setAttribute('class', 'text-xl m-5 mt-10 w-[175px] sm:text-3xl md:text-5xl font-bold text-zinc-200 sm:w-[350px]');
 
                 let img = newDiv.appendChild(document.createElement('img'));
                 img.setAttribute('src', './img/Soccer-bro.svg');
-                img.setAttribute('class', 'h-[400px]');
+                img.setAttribute('class', 'h-[150px] sm:w-[300px] md:h-[350px] lg:h-[400px]');
             } 
     })
 }
@@ -205,7 +205,7 @@ function getdataTomorrow(){
 
                 let nav = document.getElementById('tomorrow');
                 let newDiv = nav.appendChild(document.createElement('div'));
-                newDiv.setAttribute('class', 'p-2 text-xl bg-gray-800 text-center my-4 mx-[400px] shadow-lg shadow-[#00000059]');
+                newDiv.setAttribute('class', 'md:mx-[100px] xl:mx-[300px] p-2 text-xl bg-gray-800 text-center my-4 2xl:mx-[400px] shadow-lg shadow-[#00000059]');
 
                 let stage = newDiv.appendChild(document.createElement('p'));
                 stage.innerText = match.stage;
@@ -220,7 +220,7 @@ function getdataTomorrow(){
 
                 let homeFlag = teamsDiv.appendChild(document.createElement('img'));
                 homeFlag.setAttribute('src', match.flag_home);
-                homeFlag.setAttribute('class', 'w-[28px] h-[20px] mr-14 mt-[3px]');
+                homeFlag.setAttribute('class', 'w-[28px] h-[20px] sm:mr-8 mt-[3px]');
 
                 let newSpan = teamsDiv.appendChild(document.createElement('p'));
                 newSpan.innerText = "-"
@@ -228,7 +228,7 @@ function getdataTomorrow(){
 
                 let awayFlag = teamsDiv.appendChild(document.createElement('img'));
                 awayFlag.setAttribute('src', match.flag_away);
-                awayFlag.setAttribute('class', 'w-[28px] h-[20px] ml-14 mt-[3px] ');
+                awayFlag.setAttribute('class', 'w-[28px] h-[20px] sm:ml-8 mt-[3px]');
 
                 let awayTeam = teamsDiv.appendChild(document.createElement('p'));
                 awayTeam.innerText = match.awayTeam;
@@ -265,11 +265,11 @@ function getdataTomorrow(){
 
             let errorMsg_t = newDiv_t.appendChild(document.createElement('p'));
             errorMsg_t.innerText = "Sorry! An error has ocurred or there are no matches to show.";
-            errorMsg_t.setAttribute('class', 'm-[75px] text-5xl font-bold text-zinc-200 w-[350px]');
+            errorMsg_t.setAttribute('class', 'text-xl m-5 mt-10 w-[175px] sm:text-3xl md:text-5xl font-bold text-zinc-200 sm:w-[350px]');
 
             let img_t = newDiv_t.appendChild(document.createElement('img'));
             img_t.setAttribute('src', './img/Soccer-bro.svg');
-            img_t.setAttribute('class', 'h-[400px]');
+            img_t.setAttribute('class', ' h-[150px] sm:w-[300px] md:h-[350px] lg:h-[400px]');
         }
     })
 }
