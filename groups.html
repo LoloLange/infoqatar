@@ -6,51 +6,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgpA5Gvquu36zQi9vSXFhnb-iStiOUpIjg_3HYLFmN-yp-ZNB4oPfUs1wSKlPOPy5wYBTzOuNLdqP1jhSJrciNjZoG9AZDNielAs0OWU66YY34N7QWdpfXl5Emcjk9N_bi7TvOy4Hab9OAyVbA8R8Vsjk1m_hYU1_jzeV-fVc30iEWjMFatA8pCi96m/s128/Qatar2022128x.png">
     <title>InfoQatar | World Cup 2022</title>
+    <script src="groups.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.31.3/js/jquery.tablesorter.min.js" integrity="sha512-qzgd5cYSZcosqpzpn7zF2ZId8f/8CHmFKZ8j7mU4OUXTNRd5g+ZHBPsgKEwoqxCtdQvExE5LprwwPAgoicguNg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <link rel="stylesheet" href="styles.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body class="font-['Nunito'] bg-[#1B2027] text-white">
     <header class="bg-[#8A1538] fixed w-full h-[64px] shadow-lg shadow-[#00000059] z-10">
-        <div class="flex space-x-20 items-center text-lg text-zinc-200 font-medium">
-            <a href="index.html"><img class="w-[32px] brightness-[0.92] p-[6px] ml-[50px] mr-[20px]" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/FIFA_World_Cup_Icon_%28Campionato_mondiale_di_calcio%29.svg/1200px-FIFA_World_Cup_Icon_%28Campionato_mondiale_di_calcio%29.svg.png" alt="w-cup"></a>
-            <a class="transition-all hover:text-gray-700" href="index.html">Home</a>
-            <a class="transition-all hover:text-gray-700" href="index.html#today">Today</a>
-            <a class="transition-all hover:text-gray-700" href="matches.html">Matches</a>
-            <a class="transition-all hover:text-gray-700" href="#groups">Groups</a>
+        <div class="py-4 md:py-0 flex space-x-10 sm:space-x-12 md:space-x-20 items-center text-lg text-zinc-200 font-medium max-[350px]:space-x-5 max-[400px]:space-x-6">
+            <a href="#"><img class="hidden md:block w-[32px] brightness-[0.92] p-[6px] ml-[50px] mr-[20px]" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/FIFA_World_Cup_Icon_%28Campionato_mondiale_di_calcio%29.svg/1200px-FIFA_World_Cup_Icon_%28Campionato_mondiale_di_calcio%29.svg.png" alt="w-cup"></a>
+            <a class="transition-all hover:text-[#1A4527]" href="index">Home</a>
+            <a class="transition-all hover:text-[#1A4527]" href="index#today">Today</a>
+            <a class="transition-all hover:text-[#1A4527]" href="matches">Matches</a>
+            <a class="transition-all hover:text-[#1A4527]" href="groups">Groups</a>
         </div>
     </header>
      
-    <section class="pt-[100px] flex justify-center">
-        <table id="table" class="border-separate border-spacing-8 bg-[#1E293B] text-md rounded-[4px]">
-            <thead>
-                <tr>
-                    <th class="pr-[300px]">Equipo</th>
-                    <th>P</th>
-                    <th>PJ</th>
-                    <th>PG</th>
-                    <th>PE</th>
-                    <th>PP</th>
-                    <th>DIF</th>
-                </tr>
-            </thead>
+    <nav id="groups" class="py-[50px]">
+    </nav>
 
-            <tbody>
-                <tr>
-                    <td class="pr-[300px]">Equipo</td>
-                    <td>6</td>
-                    <td>3</td>
-                    <td>2</td>
-                    <td>0</td>
-                    <td>1</td>
-                    <td>+4</td>
-                </tr>
-                
-            </tbody>
-        </table>
-    </section>
+    <footer class="bg-[#8A1538] w-full">
+        <section class="flex justify-center">
+            <div class="flex justify-between items-center pr-2 text-2xl w-[300px] sm:w-[400px]">
+                <a href="#"><img class="md:block w-[32px] brightness-[0.92] p-[6px]" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/FIFA_World_Cup_Icon_%28Campionato_mondiale_di_calcio%29.svg/1200px-FIFA_World_Cup_Icon_%28Campionato_mondiale_di_calcio%29.svg.png" alt="w-cup"></a>
+                <p class="text-zinc-200">InfoQatar</p>
+                <a href="https://github.com/LoloLange/infoqatar"><i class='bx bxl-github mt-2'></i></a>
+            </div>
+        </section>
+    </footer>
 </body>
 </html>

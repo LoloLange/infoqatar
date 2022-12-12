@@ -224,7 +224,7 @@ function getdataTomorrow(){
 
                 let newSpan = teamsDiv.appendChild(document.createElement('p'));
                 newSpan.innerText = "-"
-                newSpan.setAttribute('class', 'span');
+                newSpan.setAttribute('class', 'px-4');
 
                 let awayFlag = teamsDiv.appendChild(document.createElement('img'));
                 awayFlag.setAttribute('src', match.flag_away);
