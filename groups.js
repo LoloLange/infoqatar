@@ -17,7 +17,7 @@ function groups(){
             let nav = document.getElementById("groups");
             let newDiv = nav.appendChild(document.createElement("div"));
             newDiv.setAttribute("id", `group_${groups.group_name}`);
-            newDiv.setAttribute("class", "flex lg:justify-center")
+            newDiv.setAttribute("class", "flex lg:justify-center max-lg:mx-3")
             newDiv.setAttribute("style", "overflow-x:auto;")
             
             let group_name = newDiv.appendChild(document.createElement("p"));
@@ -248,7 +248,7 @@ function groups(){
 
                 let flag = newDiv.appendChild(document.createElement("img"));
                 flag.setAttribute('src', "./img/" +  details.groups[id].teams[team].name + ".svg.webp");
-                flag.setAttribute('class', 'w-[28px] h-[20px] mr-5');
+                flag.setAttribute('class', 'w-[28px] h-[20px] mr-5 mt-[2.4px]');
     
                 let thb = newDiv.appendChild(document.createElement("td"));
                 thb.innerText = details.groups[id].teams[team].name
