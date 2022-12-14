@@ -497,12 +497,14 @@ function semiFinal(){
                         match.time = "Upcoming"
                     }
 
-                    if(match.homeGoals === undefined && match.awayGoals === undefined) {
+                    if(match.homeGoals === undefined || match.awayGoals === undefined) {
                         match.homeGoals = null;
                         match.awayGoals = null;
+                        match.away_penalties = null;
+                        match.home_penalties = null;
                     }
 
-                    if(match.status || match.time === "in_progress") {
+                    if(match.status === "in_progress" || match.time === "in_progress") {
                         match.time = "In progress. See live minute in today's matches"
                     }
     
@@ -614,7 +616,7 @@ function thirdPlace(){
     fetch("https://worldcupjson.net/matches")
     .then((data) => data.json())
     .then((details) => {
-
+            
             // get info about matches
             let stage_id = [62]
 
@@ -661,7 +663,7 @@ function thirdPlace(){
                         match.time = "Upcoming"
                     }
 
-                    if(match.homeGoals === undefined && match.awayGoals === undefined) {
+                    if(match.homeGoals === undefined || match.awayGoals === undefined) {
                         match.homeGoals = null;
                         match.awayGoals = null;
                     }
@@ -699,10 +701,16 @@ function thirdPlace(){
                         
                         let teamsDiv = newDiv.appendChild(document.createElement('div'));
                         teamsDiv.setAttribute('class', 'flex justify-center py-3 text-2xl')
-        
-                        let homeTeam = teamsDiv.appendChild(document.createElement('p'));
-                        homeTeam.innerText = match.homeTeam;
-                        homeTeam.setAttribute('class', 'px-2');
+                        
+                        if(details[id].home_team.name === "To Be Determined") {
+                            let homeTeam = teamsDiv.appendChild(document.createElement('p'));
+                            homeTeam.innerText = match.homeTeam;
+                            homeTeam.setAttribute('class', 'pr-[28px] sm:pr-[33px]');
+                        } else {
+                            let homeTeam = teamsDiv.appendChild(document.createElement('p'));
+                            homeTeam.innerText = match.homeTeam;
+                            homeTeam.setAttribute('class', 'px-2');
+                        }
 
                         if(match.flag_home != "./img/To Be Determined.svg.webp") {
                             let homeFlag = teamsDiv.appendChild(document.createElement('img'));
@@ -738,9 +746,15 @@ function thirdPlace(){
                             awayFlag.setAttribute('class', 'w-[28px] h-[20px] sm:ml-8 mt-[5px]');
                         }
 
-                        let awayTeam = teamsDiv.appendChild(document.createElement('p'));
-                        awayTeam.innerText = match.awayTeam;
-                        awayTeam.setAttribute('class', 'px-2');
+                        if(details[id].away_team.name === "To Be Determined") {
+                            let awayTeam = teamsDiv.appendChild(document.createElement('p'));
+                            awayTeam.innerText = match.awayTeam;
+                            awayTeam.setAttribute('class', 'pl-[28px] sm:pl-[60px]');
+                        } else {
+                            let awayTeam = teamsDiv.appendChild(document.createElement('p'));
+                            awayTeam.innerText = match.awayTeam;
+                            awayTeam.setAttribute('class', 'px-2');
+                        }
         
                         let dateTime = newDiv.appendChild(document.createElement('p'));
                         dateTime.innerText = match.dateTime;
@@ -824,7 +838,7 @@ function finale(){
                         match.time = "Upcoming"
                     }
 
-                    if(match.homeGoals === undefined && match.awayGoals === undefined) {
+                    if(match.homeGoals === undefined || match.awayGoals === undefined) {
                         match.homeGoals = null;
                         match.awayGoals = null;
                     }
@@ -863,9 +877,15 @@ function finale(){
                         let teamsDiv = newDiv.appendChild(document.createElement('div'));
                         teamsDiv.setAttribute('class', 'flex justify-center py-3 text-2xl')
         
-                        let homeTeam = teamsDiv.appendChild(document.createElement('p'));
-                        homeTeam.innerText = match.homeTeam;
-                        homeTeam.setAttribute('class', 'px-2');
+                        if(details[id].home_team.name === "To Be Determined") {
+                            let homeTeam = teamsDiv.appendChild(document.createElement('p'));
+                            homeTeam.innerText = match.homeTeam;
+                            homeTeam.setAttribute('class', 'pr-[28px] sm:pr-[70px]');
+                        } else {
+                            let homeTeam = teamsDiv.appendChild(document.createElement('p'));
+                            homeTeam.innerText = match.homeTeam;
+                            homeTeam.setAttribute('class', 'px-2');
+                        }
 
                         if(match.flag_home != "./img/To Be Determined.svg.webp") {
                             let homeFlag = teamsDiv.appendChild(document.createElement('img'));
@@ -901,9 +921,15 @@ function finale(){
                             awayFlag.setAttribute('class', 'w-[28px] h-[20px] sm:ml-8 mt-[5px]');
                         }
 
-                        let awayTeam = teamsDiv.appendChild(document.createElement('p'));
-                        awayTeam.innerText = match.awayTeam;
-                        awayTeam.setAttribute('class', 'px-2');
+                        if(details[id].away_team.name === "To Be Determined") {
+                            let awayTeam = teamsDiv.appendChild(document.createElement('p'));
+                            awayTeam.innerText = match.awayTeam;
+                            awayTeam.setAttribute('class', 'pl-[28px] sm:pl-[70px]');
+                        } else {
+                            let awayTeam = teamsDiv.appendChild(document.createElement('p'));
+                            awayTeam.innerText = match.awayTeam;
+                            awayTeam.setAttribute('class', 'px-2');
+                        }
         
                         let dateTime = newDiv.appendChild(document.createElement('p'));
                         dateTime.innerText = match.dateTime;

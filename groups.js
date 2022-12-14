@@ -71,7 +71,7 @@ function groups(){
                     teams_b = [0, 3, 2, 1];
                     break;
                 case 2:
-                    teams_b = [2, 1, 0, 3];
+                    teams_b = [1, 2, 0, 3];
                     break;
                 case 3:
                     teams_b = [3, 1, 0, 2];
@@ -80,7 +80,7 @@ function groups(){
                     teams_b = [1, 0, 3, 2];
                     break;
                 case 5:
-                    teams_b = [2, 0, 1, 3];
+                    teams_b = [1, 2, 0, 3];
                     break;
                 case 6:
                     teams_b = [0, 3, 2, 1];
@@ -90,9 +90,158 @@ function groups(){
                     break;
             }
 
+            
+
             let tbody = table.appendChild(document.createElement("tbody"));
             // get every value to it's place
             teams_b.forEach((team) => {
+                
+                // hard-coding because json gives data counting all matches, even knockout :(
+                
+                if(details.groups[id].teams[team].name === "Netherlands") {
+                    details.groups[id].teams[team].group_points = 7;
+                    details.groups[id].teams[team].games_played = 3;
+                    details.groups[id].teams[team].wins = 2;
+                    details.groups[id].teams[team].draws = 1;
+                    details.groups[id].teams[team].losses = 0;
+                    details.groups[id].teams[team].goal_differential = 4;
+                }
+
+                if(details.groups[id].teams[team].name === "Senegal") {
+                    details.groups[id].teams[team].group_points = 6;
+                    details.groups[id].teams[team].games_played = 3;
+                    details.groups[id].teams[team].wins = 2;
+                    details.groups[id].teams[team].draws = 0;
+                    details.groups[id].teams[team].losses = 1;
+                    details.groups[id].teams[team].goal_differential = 1;
+                }
+
+                if(details.groups[id].teams[team].name === "England") {
+                    details.groups[id].teams[team].group_points = 7;
+                    details.groups[id].teams[team].games_played = 3;
+                    details.groups[id].teams[team].wins = 2;
+                    details.groups[id].teams[team].draws = 1;
+                    details.groups[id].teams[team].losses = 0;
+                    details.groups[id].teams[team].goal_differential = 7;
+                }
+
+                if(details.groups[id].teams[team].name === "United States") {
+                    details.groups[id].teams[team].group_points = 5;
+                    details.groups[id].teams[team].games_played = 3;
+                    details.groups[id].teams[team].wins = 1;
+                    details.groups[id].teams[team].draws = 2;
+                    details.groups[id].teams[team].losses = 0;
+                    details.groups[id].teams[team].goal_differential = 1;
+                }
+
+                if(details.groups[id].teams[team].name === "Argentina") {
+                    details.groups[id].teams[team].group_points = 6;
+                    details.groups[id].teams[team].games_played = 3;
+                    details.groups[id].teams[team].wins = 2;
+                    details.groups[id].teams[team].draws = 0;
+                    details.groups[id].teams[team].losses = 1;
+                    details.groups[id].teams[team].goal_differential = 3;
+                }
+
+                if(details.groups[id].teams[team].name === "Poland") {
+                    details.groups[id].teams[team].group_points = 4;
+                    details.groups[id].teams[team].games_played = 3;
+                    details.groups[id].teams[team].wins = 1;
+                    details.groups[id].teams[team].draws = 1;
+                    details.groups[id].teams[team].losses = 1;
+                    details.groups[id].teams[team].goal_differential = 0;
+                }
+
+                if(details.groups[id].teams[team].name === "France") {
+                    details.groups[id].teams[team].group_points = 6;
+                    details.groups[id].teams[team].games_played = 3;
+                    details.groups[id].teams[team].wins = 2;
+                    details.groups[id].teams[team].draws = 0;
+                    details.groups[id].teams[team].losses = 1;
+                    details.groups[id].teams[team].goal_differential = 3;
+                }
+
+                if(details.groups[id].teams[team].name === "Australia") {
+                    details.groups[id].teams[team].group_points = 6;
+                    details.groups[id].teams[team].games_played = 3;
+                    details.groups[id].teams[team].wins = 2;
+                    details.groups[id].teams[team].draws = 0;
+                    details.groups[id].teams[team].losses = 1;
+                    details.groups[id].teams[team].goal_differential = -1;
+                }
+
+                if(details.groups[id].teams[team].name === "Japan") {
+                    details.groups[id].teams[team].group_points = 6;
+                    details.groups[id].teams[team].games_played = 3;
+                    details.groups[id].teams[team].wins = 2;
+                    details.groups[id].teams[team].draws = 0;
+                    details.groups[id].teams[team].losses = 1;
+                    details.groups[id].teams[team].goal_differential = 1;
+                }
+
+                if(details.groups[id].teams[team].name === "Spain") {
+                    details.groups[id].teams[team].group_points = 4;
+                    details.groups[id].teams[team].games_played = 3;
+                    details.groups[id].teams[team].wins = 1;
+                    details.groups[id].teams[team].draws = 1;
+                    details.groups[id].teams[team].losses = 1;
+                    details.groups[id].teams[team].goal_differential = 6;
+                }
+
+                if(details.groups[id].teams[team].name === "Morocco") {
+                    details.groups[id].teams[team].group_points = 7;
+                    details.groups[id].teams[team].games_played = 3;
+                    details.groups[id].teams[team].wins = 2;
+                    details.groups[id].teams[team].draws = 1;
+                    details.groups[id].teams[team].losses = 0;
+                    details.groups[id].teams[team].goal_differential = 3;
+                }
+
+                if(details.groups[id].teams[team].name === "Croatia") {
+                    details.groups[id].teams[team].group_points = 5;
+                    details.groups[id].teams[team].games_played = 3;
+                    details.groups[id].teams[team].wins = 1;
+                    details.groups[id].teams[team].draws = 2;
+                    details.groups[id].teams[team].losses = 0;
+                    details.groups[id].teams[team].goal_differential = 3;
+                }
+
+                if(details.groups[id].teams[team].name === "Brazil") {
+                    details.groups[id].teams[team].group_points = 6;
+                    details.groups[id].teams[team].games_played = 3;
+                    details.groups[id].teams[team].wins = 2;
+                    details.groups[id].teams[team].draws = 0;
+                    details.groups[id].teams[team].losses = 1;
+                    details.groups[id].teams[team].goal_differential = 2;
+                }
+
+                if(details.groups[id].teams[team].name === "Switzerland") {
+                    details.groups[id].teams[team].group_points = 6;
+                    details.groups[id].teams[team].games_played = 3;
+                    details.groups[id].teams[team].wins = 2;
+                    details.groups[id].teams[team].draws = 0;
+                    details.groups[id].teams[team].losses = 1;
+                    details.groups[id].teams[team].goal_differential = 1;
+                }
+
+                if(details.groups[id].teams[team].name === "Portugal") {
+                    details.groups[id].teams[team].group_points = 6;
+                    details.groups[id].teams[team].games_played = 3;
+                    details.groups[id].teams[team].wins = 2;
+                    details.groups[id].teams[team].draws = 0;
+                    details.groups[id].teams[team].losses = 1;
+                    details.groups[id].teams[team].goal_differential = 2;
+                }
+
+                if(details.groups[id].teams[team].name === "Korea Republic") {
+                    details.groups[id].teams[team].group_points = 4;
+                    details.groups[id].teams[team].games_played = 3;
+                    details.groups[id].teams[team].wins = 1;
+                    details.groups[id].teams[team].draws = 1;
+                    details.groups[id].teams[team].losses = 1;
+                    details.groups[id].teams[team].goal_differential = 0;
+                }
+
                 let tr_b = tbody.appendChild(document.createElement("tr"));
                 let newDiv = tr_b.appendChild(document.createElement("div"));
                 newDiv.setAttribute("class", "flex");
