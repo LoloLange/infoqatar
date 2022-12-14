@@ -1,3 +1,4 @@
+## changing the url, so it doesn't show .html
 RewriteEngine On
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME} !-f

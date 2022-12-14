@@ -17,26 +17,7 @@ let fases = [gs, r8, r4, sf, p3, fi];
 
 let fases_nav = [group_stage, round_8, round_4, semifinal, third_place, final];
 
-
-// fases.forEach((fase) => {
-//     fase.addEventListener('click', () => {
-//         fases.forEach((fase) => {
-//             fase.setAttribute('aria-selected', 'false');
-//             fase.setAttribute('aria-hidden', 'true');
-//         })
-//         fase.setAttribute('aria-selected', 'true');
-//         fase.setAttribute('aria-hidden', 'false');
-
-//         fases_nav.forEach((fase) => {
-//             fase.setAttribute('aria-current', 'false');
-//             fase.setAttribute('aria-hidden', 'true');
-//         })
-//         fase.setAttribute('aria-current', 'true');
-//         fase.setAttribute('aria-hidden', 'false');
-
-//     })
-// })
-
+// get to show group stage values
 const groupStage = () => {
     gs.addEventListener('click', () => {
         fases_nav.forEach((fase) => {
@@ -50,7 +31,7 @@ const groupStage = () => {
 
     })
 }
-
+// get to show round of 16 values
 const round8 = () => {
     r8.addEventListener('click', () => {
         fases_nav.forEach((fase) => {
@@ -63,7 +44,7 @@ const round8 = () => {
         round_8.setAttribute('aria-current', 'true');
     })
 }
-
+// get to show quarter-finals values
 const round4 = () => {
     r4.addEventListener('click', () => {
         fases_nav.forEach((fase) => {
@@ -76,7 +57,7 @@ const round4 = () => {
         round_4.setAttribute('aria-current', 'true');
     })
 }
-
+// get to show semi-finals values
 const semifinals = () => {
     sf.addEventListener('click', () => {
         fases_nav.forEach((fase) => {
@@ -89,7 +70,7 @@ const semifinals = () => {
         semifinal.setAttribute('aria-current', 'true');
     })
 }
-
+// get to show third place value
 const thirdplace = () => {
     p3.addEventListener('click', () => {
         fases_nav.forEach((fase) => {
@@ -102,7 +83,7 @@ const thirdplace = () => {
         third_place.setAttribute('aria-current', 'true');
     })
 }
-
+// get to show final value
 const final1 = () => {
     fi.addEventListener('click', () => {
         fases_nav.forEach((fase) => {
@@ -115,7 +96,7 @@ const final1 = () => {
         final.setAttribute('aria-current', 'true');
     })
 }
-
+// calling the functions
 groupStage();
 round8();
 round4();

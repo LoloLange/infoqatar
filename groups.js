@@ -2,8 +2,7 @@ function groups(){
     fetch("https://worldcupjson.net/teams")
     .then((data) => data.json())
     .then((details) => {
-        console.log(details);
-
+        // groups number
         let groups_id = [0, 1, 2, 3, 4, 5, 6, 7];
 
         groups_id.forEach((id) => {
@@ -35,7 +34,7 @@ function groups(){
             
             let tr_h = thead.appendChild(document.createElement("tr"));
             tr_h.setAttribute("class", "")
-
+            // create the table titles
             let thh = tr_h.appendChild(document.createElement("th"));
             thh.innerText = "Team"
             thh.setAttribute("class", "text-left")
@@ -92,7 +91,7 @@ function groups(){
             }
 
             let tbody = table.appendChild(document.createElement("tbody"));
-            
+            // get every value to it's place
             teams_b.forEach((team) => {
                 let tr_b = tbody.appendChild(document.createElement("tr"));
                 let newDiv = tr_b.appendChild(document.createElement("div"));
@@ -124,9 +123,6 @@ function groups(){
                 let tdb_6 = tr_b.appendChild(document.createElement("td"));
                 tdb_6.innerText = details.groups[id].teams[team].goal_differential;
             })
-
-            
-
         })
 
 })}
