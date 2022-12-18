@@ -843,7 +843,7 @@ function finale(){
                         match.awayGoals = null;
                     }
                     
-                    if(match.status === "in_progress") {
+                    if(match.status || match.time === "in_progress") {
                         match.time = "In progress. See live minute in today's matches"
                     }
     
